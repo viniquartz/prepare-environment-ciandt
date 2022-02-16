@@ -70,6 +70,8 @@ It's necessary to press 'enter' for the installation to continue.
 
 #### Configure Git
 
+Input you user.name and user.mail
+
 ```
 git config --global user.name '<your name>'
 git config --global user.email '<your@email>'
@@ -77,7 +79,7 @@ git config --global core.editor 'code --wait'
 git config --global pull.rebase true
 ```
 
-#### Install Slack
+<!-- #### Install Slack
 
 Download image .deb - https://slack.com/intl/pt-br/downloads/linux  
 Example download name - slack-desktop-4.23.0-amd64.deb
@@ -92,4 +94,4 @@ Download image .deb - https://code.visualstudio.com/download
 Example download name - code_1.63.2-1639562499_amd64.deb
 ```
 sudo apt install ./code_1.63.2-1639562499_amd64.deb
-```
+``` -->

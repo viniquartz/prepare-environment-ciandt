@@ -115,28 +115,32 @@ brew install terragrunt
 echo "================== TERRAFORM-DOCKER INTEGRATION ===================";
 ssh-keyscan -t rsa vs-ssh.visualstudio.com >> ~/.ssh/known_hosts
 
+echo "================== INSTALL SLACK - ===================";
+sudo snap install slack --classic
+# Download image .deb - https://slack.com/intl/pt-br/downloads/linux
+# Install sudo apt install ./slack-desktop-4.23.0-amd64.deb
+# Example download name - slack-desktop-4.23.0-amd64.deb
+# echo "Download image .deb - https://slack.com/intl/pt-br/downloads/linux"
+# echo "Install - sudo apt install ./slack-desktop-4.23.0-amd64.deb"
+# echo "Example download name - slack-desktop-4.23.0-amd64.deb"
+
+echo "================== INSTALL VSCODE - MANUAL ===================";
+sudo snap install code --classic
+# echo "How to - https://code.visualstudio.com/docs/setup/linux"
+# echo "Download image .deb - https://code.visualstudio.com/download"
+# echo "Install - sudo apt install ./code_1.63.2-1639562499_amd64.deb"
+# echo "Example download name - code_1.63.2-1639562499_amd64.deb"
+
 echo "================== INSTALL GIT ===================";
 sudo apt install git -y
 sudo apt --fix-broken install -y
 
 echo "================== CONFIGURE GIT - MANUAL ===================";
-echo "git config --global user.name '<your name>'"
-echo "git config --global user.email '<your@email>'"
-##command to git to use visual studio code as default editor
-echo "git config --global core.editor 'code --wait'"
-##command to git to use rebase as default merge strategy
-echo "git config --global pull.rebase true"
-
-echo "================== INSTALL SLACK - MANUAL ===================";
-# Download image .deb - https://slack.com/intl/pt-br/downloads/linux
-# Install sudo apt install ./slack-desktop-4.23.0-amd64.deb
-# Example download name - slack-desktop-4.23.0-amd64.deb
-echo "Download image .deb - https://slack.com/intl/pt-br/downloads/linux"
-echo "Install - sudo apt install ./slack-desktop-4.23.0-amd64.deb"
-echo "Example download name - slack-desktop-4.23.0-amd64.deb"
-
-echo "================== INSTALL VSCODE - MANUAL ===================";
-echo "How to - https://code.visualstudio.com/docs/setup/linux"
-echo "Download image .deb - https://code.visualstudio.com/download"
-echo "Install - sudo apt install ./code_1.63.2-1639562499_amd64.deb"
-echo "Example download name - code_1.63.2-1639562499_amd64.deb"
+echo "Enter the user.name '<your name>' git: "
+read git_user
+echo "Enter the user.email '<your@email>' git: "
+read git_email
+git config --global user.name $git_user
+git config --global user.email $git_email
+git config --global core.editor "code --wait"
+git config --global pull.rebase true
