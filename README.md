@@ -1,6 +1,6 @@
 # Prepare environment 
 
-## Script to automate the installation of features on the machine.
+## Script to automate the installation of features on the machine.  
 
 Table of contents
 =================
@@ -8,7 +8,7 @@ Table of contents
    * [Resources](#Resources)
    * [How-To](#How-To)
    * [Manual-Settings](#Manual-Settings)
-<!--te-->
+<!--te-->  
 
 ### Resources
 - Docker
@@ -63,7 +63,8 @@ cd tmp/
 ```
 
 #### In INSTALL HOMEBREW
-It's necessary to press 'enter' for the installation to continue.
+It's necessary to press 'enter' for the installation to continue.  
+
 
 ### Manual-Settings
 
@@ -78,7 +79,7 @@ git config --global pull.rebase true
 
 #### Install Slack
 
-Download image .deb - https://slack.com/intl/pt-br/downloads/linux
+Download image .deb - https://slack.com/intl/pt-br/downloads/linux  
 Example download name - slack-desktop-4.23.0-amd64.deb
 ```
 sudo apt install ./slack-desktop-4.23.0-amd64.deb
@@ -86,8 +87,8 @@ sudo apt install ./slack-desktop-4.23.0-amd64.deb
 
 #### Install Visual Code
 
-How to - https://code.visualstudio.com/docs/setup/linux
-Download image .deb - https://code.visualstudio.com/download
+How to - https://code.visualstudio.com/docs/setup/linux  
+Download image .deb - https://code.visualstudio.com/download  
 Example download name - code_1.63.2-1639562499_amd64.deb
 ```
 sudo apt install ./code_1.63.2-1639562499_amd64.deb
