@@ -93,13 +93,10 @@ sudo apt update
 sudo apt install snapd
 sudo snap install storage-explorer
 
-echo "================== TERRAFORM-DOCKER INTEGRATION ===================";
-ssh-keyscan -t rsa vs-ssh.visualstudio.com >> ~/.ssh/known_hosts
-
-echo "================== INSTALL TERRAFORM ===================";
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-sudo apt-get update -y && sudo apt-get install terraform -y
+# echo "================== INSTALL TERRAFORM ===================";
+# curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+# sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+# sudo apt-get update -y && sudo apt-get install terraform -y
 
 echo "================== INSTALL HOMEBREW ===================";
 echo "You need to press 'enter' for the installation to continue"
@@ -108,7 +105,15 @@ test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile
 echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
+
+echo "================== INSTALL TFENV ===================";
+brew install tfenv
+
+echo "================== INSTALL TERRAGRUNT ===================";
 brew install terragrunt
+
+echo "================== TERRAFORM-DOCKER INTEGRATION ===================";
+ssh-keyscan -t rsa vs-ssh.visualstudio.com >> ~/.ssh/known_hosts
 
 echo "================== INSTALL GIT ===================";
 sudo apt install git -y
