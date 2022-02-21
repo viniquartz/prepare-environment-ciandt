@@ -108,6 +108,9 @@ echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
 
 echo "================== INSTALL TFENV ===================";
 brew install tfenv
+tfenv install 0.12.29
+tfenv install 1.0.5
+tfenv use 1.0.5
 
 echo "================== INSTALL TERRAGRUNT ===================";
 brew install terragrunt
